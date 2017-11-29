@@ -48,13 +48,16 @@ dependencies {
     compile project(':mylibrary')
 
     compile 'com.android.support:support-v4:25.4.0'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+
     testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.1', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+        exclude module: 'support-annotations'
         exclude group: 'com.google.code.findbugs'
 
-    })
-    androidTestCompile ('com.android.support.test.espresso:espresso-intents:3.0.1'){
+    }
+    androidTestCompile ('com.android.support.test.espresso:espresso-intents:2.2.2'){
+        exclude module: 'support-annotations'
         exclude group: 'com.google.code.findbugs'
 
     }
